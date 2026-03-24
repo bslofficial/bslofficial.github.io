@@ -1,294 +1,74 @@
-/* Google Fonts - Hind Siliguri (Bengali Support) */
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary-color: #1a237e; /* Deep Indigo for Trust */
-    --secondary-color: #ffca28; /* Premium Gold for Accent */
-    --accent-color: #fdd835; /* Brighter Yellow for Buttons */
-    --background-color: #f4f7f6;
-    --text-color: #37474f;
-    --card-bg: #ffffff;
-    --shadow-color: rgba(0, 0, 0, 0.08);
+    --primary: #1a237e;
+    --gold: #ffca28;
+    --bg: #f4f7f6;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Hind Siliguri', sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Hind Siliguri', sans-serif; }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
+body { background: var(--bg); color: #333; line-height: 1.6; }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
 
-/* --- Premium Header & Modern Navigation --- */
+/* Header & Nav */
 header {
     background: linear-gradient(135deg, #10195e 0%, #1e3c72 100%);
-    color: white;
-    padding: 60px 20px 80px;
-    text-align: center;
-    border-bottom: 5px solid var(--secondary-color);
-    position: relative;
-    overflow: hidden;
+    color: white; padding: 60px 20px 80px; text-align: center;
+    border-bottom: 5px solid var(--gold); position: relative;
 }
 
-header::after {
-    content: '';
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: var(--background-color);
-    border-radius: 100%;
-}
-
-.logo {
-    font-size: 2.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    z-index: 10;
-    position: relative;
-}
-
-.logo span {
-    color: var(--secondary-color);
-}
+.logo { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+.logo span { color: var(--gold); }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 20px 0;
-    z-index: 10;
-    position: relative;
+    list-style: none; display: flex; justify-content: center; gap: 20px; margin-bottom: 15px;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: 0.3s;
-}
+.nav-links a { color: white; text-decoration: none; font-weight: 600; font-size: 1rem; }
 
-.nav-links a:hover {
-    color: var(--secondary-color);
-    transform: translateY(-3px);
-}
-
-.hero h1 {
-    font-size: 2.2rem;
-    margin: 15px 0;
-    font-weight: 700;
-    z-index: 10;
-    position: relative;
-}
-
-.hero p {
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #ccc;
-    margin-bottom: 20px;
-}
-
-/* --- Refer & Earn Section - Floating Design --- */
-.refer-section {
-    margin-top: -80px; /* Overlap effect */
-    position: relative;
-    z-index: 20;
-}
-
+/* Refer Section */
+.refer-section { margin-top: -70px; position: relative; z-index: 10; }
 .refer-box {
-    background: #fff;
-    border: 1px solid var(--secondary-color);
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    background: white; padding: 30px; border-radius: 20px; text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); border: 1px solid var(--gold);
 }
 
-.refer-box h2 {
-    color: var(--primary-color);
-    font-size: 1.8rem;
-}
+.copy-area { display: flex; gap: 10px; justify-content: center; margin-top: 15px; }
+#referLink { padding: 12px; width: 60%; border-radius: 10px; border: 1px solid #ddd; }
 
-.refer-box p {
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.copy-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 15px;
-    flex-wrap: wrap;
-}
-
-#referLink {
-    padding: 15px;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background: #fdfdfd;
-    font-size: 1rem;
-    color: #555;
-    transition: 0.3s;
-}
-
-#referLink:focus {
-    border-color: var(--primary-color);
-}
-
-/* --- App Cards - Premium Card Layout --- */
-.app-section h2 {
-    text-align: center;
-    color: var(--primary-color);
-    font-size: 2.2rem;
-    margin: 50px 0;
-}
-
+/* Grid System - Responsive */
 .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 20px;
 }
 
 .card {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    text-align: center;
-    transition: 0.4s ease;
-    border: 1px solid #eee;
+    background: white; padding: 30px; border-radius: 20px; text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(26, 35, 126, 0.1);
-}
+.card:hover { transform: translateY(-10px); }
 
-.card h3 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    font-size: 1.6rem;
-}
-
-.card p {
-    color: #666;
-    margin-bottom: 15px;
-}
-
-/* --- Buttons - Interative and Clean --- */
 .btn-sm {
-    display: inline-block;
-    background: var(--accent-color);
-    color: #000;
-    padding: 15px 40px;
-    text-decoration: none;
-    border-radius: 60px;
-    font-weight: 700;
-    margin-top: 25px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
+    background: var(--gold); color: black; padding: 12px 30px;
+    border-radius: 50px; font-weight: 700; text-decoration: none;
+    display: inline-block; cursor: pointer; border: none; transition: 0.3s;
 }
 
-.btn-sm:hover {
-    background: var(--secondary-color);
-    transform: scale(1.05);
+.btn-sm:hover { background: #ffd54f; transform: scale(1.05); }
+
+footer { background: #111; color: #aaa; text-align: center; padding: 40px; margin-top: 50px; }
+
+/* Mobile View Adjustments */
+@media (max-width: 800px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* --- About & Privacy Pages Styling --- */
-.content-page {
-    background: #fff;
-    padding: 60px;
-    border-radius: 20px;
-    margin-top: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.content-page h1, .content-page h2 {
-    color: var(--primary-color);
-    margin-bottom: 30px;
-    font-size: 2.2rem;
-}
-
-.content-page p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    color: #444;
-}
-
-/* --- Recommendation Widget Section --- */
-#recom-widget {
-    background: #eee;
-    padding: 50px 0;
-    margin-top: 50px;
-}
-
-#recom-widget .container h3 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 30px;
-}
-
-/* --- Contact Us Form --- */
-#contact-form {
-    max-width: 600px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#contact-form input, #contact-form textarea {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background: #fdfdfd;
-}
-
-/* --- Footer --- */
-footer {
-    text-align: center;
-    padding: 60px 20px;
-    background: #111;
-    color: #aaa;
-    margin-top: 0;
-}
-
-/* Ad Placement Style */
-#ad-top, #recom-widget {
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 20px auto;
-    max-width: 100%;
-    z-index: 10;
-}
-
-/* --- Mobile Responsive --- */
 @media (max-width: 600px) {
-    .logo { font-size: 2.2rem; }
+    .card-grid { grid-template-columns: 1fr; } /* মোবাইলে একটি কলাম */
+    .copy-area { flex-direction: column; }
     #referLink { width: 100%; }
-    .hero h1 { font-size: 1.6rem; }
-    .card-grid { grid-template-columns: 1fr; }
-    .nav-links { gap: 15px; flex-wrap: wrap; }
+    .hero h1 { font-size: 1.5rem; }
+    .logo { font-size: 2rem; }
 }
