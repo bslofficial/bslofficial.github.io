@@ -5,31 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="6a97888e-site-verification" content="1c0b73a101d68618ffbec0c9e9d3b482">
     <title>BSL Official - Best Earning Apps 2026</title>
-    
-    <style>
-        /* আপনার আগের style.css-এর কোডগুলো এখানে থাকবে */
-        /* নিচে ইনলাইন স্টাইলগুলোকে সুন্দরভাবে সাজিয়ে দেওয়া হলো */
-        .text-center {
-            text-align: center;
-        }
-        .margin-v {
-            margin: 20px auto;
-        }
-        .section-title {
-            text-align: center; 
-            margin-bottom: 30px; 
-            color: #1a237e;
-        }
-        #recom-widget {
-            padding: 40px 0; 
-            background: #eee; 
-            margin-top: 50px;
-        }
-        .recom-title {
-            text-align: center; 
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     
     <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
 
@@ -81,7 +57,7 @@
             </div>
         </header>
 
-        <div id="ad-top" class="container text-center margin-v">
+        <div id="ad-top" class="container" style="text-align: center; margin: 20px auto;">
             <ins class="eas6a97888e2" data-zoneid="5881350"></ins>
             <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
         </div>
@@ -98,7 +74,7 @@
         </section>
 
         <section class="container app-section">
-            <h2 class="section-title">উপলব্ধ অ্যাপসমূহ</h2>
+            <h2 style="text-align: center; margin-bottom: 30px; color: #1a237e;">উপলব্ধ অ্যাপসমূহ</h2>
             <div class="card-grid">
                 <div class="card">
                     <h3>Cash Reward Pro</h3>
@@ -118,9 +94,9 @@
             </div>
         </section>
 
-        <div id="recom-widget">
+        <div id="recom-widget" style="padding: 40px 0; background: #eee; margin-top: 50px;">
             <div class="container">
-                <h3 class="recom-title">আপনার জন্য আরও অফার:</h3>
+                <h3 style="text-align: center; margin-bottom: 20px;">আপনার জন্য আরও অফার:</h3>
                 <ins class="eas6a97888e20" data-zoneid="5881358"></ins>
                 <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
             </div>
@@ -135,10 +111,21 @@
     function copyLink() {
         var copyText = document.getElementById("referLink");
         copyText.select();
-        copyText.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(copyText.value);
-        alert("লিঙ্কটি কপি হয়েছে!");
+        copyText.setSelectionRange(0, 99999); // মোবাইল ডিভাইসের সুরক্ষার জন্য
+        
+        try {
+            // আধুনিক ব্রাউজারের লজিক
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(copyText.value);
+            } else {
+                // পুরোনো মোবাইলের ব্যাকআপ লজিক
+                document.execCommand("copy");
+            }
+            alert("লিঙ্কটি কপি হয়েছে! 🎉");
+        } catch (err) {
+            alert("দুঃখিত, কপি করা যায়নি। ম্যানুয়ালি সিলেক্ট করে কপি করুন।");
+        }
     }
     </script>
 </body>
-    </html>
+</html>
